@@ -1,0 +1,107 @@
+.chatbox {
+  position: fixed;
+  height: 460px;
+  bottom: 92px;
+  right: 24px;
+  width: 360px;
+  max-width: calc(100vw - 32px);
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(2, 6, 23, 0.18);
+  overflow: hidden;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  z-index: 60;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 14px;
+  background: linear-gradient(
+    180deg,
+    rgba(250, 233, 231, 0.9),
+    rgba(231, 250, 243, 0.6)
+  );
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.title {
+  font-weight: 700;
+  color: #111827;
+}
+.subtitle {
+  color: var(--color-muted);
+  font-size: 12px;
+}
+
+.iconBtn {
+  border: none;
+  background: transparent;
+  color: #111827;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.welcome {
+  padding: 12px 14px;
+  color: #111827;
+}
+
+.chat-container { overflow: auto; padding: 8px 14px; }
+.messages { display: grid; gap: 10px; }
+.msg { display: grid; gap: 6px; }
+.from-user { justify-items: end; }
+.bubble { max-width: 85%; padding: 10px 12px; border-radius: 12px; box-shadow: 0 6px 12px rgba(2,6,23,0.06); }
+.bubble-user { background: #e5f3ff; color: #111827; }
+.bubble-ai { background: #f1f5f9; color: #111827; }
+.typing { color: var(--color-muted); font-size: 13px; }
+
+.suggestions {
+  display: grid;
+  gap: 8px;
+  padding: 0 14px 12px;
+}
+.suggestion {
+  text-align: left;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  background: #fff;
+  padding: 8px 10px;
+  border-radius: 10px;
+  color: #374151;
+  cursor: pointer;
+}
+
+.inputBar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  padding: 10px;
+}
+.inputBar input {
+  flex: 1;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 10px;
+  padding: 10px 12px;
+}
+.sendBtn {
+  border: none;
+  background: var(--color-blue-900);
+  color: #fff;
+  border-radius: 10px;
+  padding: 10px 12px;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+}
+
+@media (max-width: 480px) {
+  .chatbox {
+    right: 12px;
+    left: 12px;
+    width: auto;
+    bottom: 78px;
+  }
+}

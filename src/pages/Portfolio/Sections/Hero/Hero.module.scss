@@ -1,0 +1,139 @@
+.hero {
+  position: relative;
+  padding: 80px 16px 56px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.bgDecor {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    600px 240px at 50% 0%,
+    rgba(255, 4, 4, 0.18),
+    rgba(10, 10, 255, 0)
+  );
+  pointer-events: none;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.avatarWrap {
+  display: flex;
+  justify-content: center;
+}
+
+.avatarRing {
+  width: 128px;
+  height: 128px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--color-blue-300) 0%, var(--color-blue-100) 100%);
+  padding: 6px;
+}
+
+.avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  display: grid;
+  place-items: center;
+  background: #10b981;
+  color: white;
+  font-weight: 800;
+  font-size: 40px;
+}
+
+.title {
+  margin: 28px 0 8px;
+  font-size: 56px;
+  line-height: 1.1;
+  font-weight: 800;
+  color: black;
+}
+
+.accent {
+  color: var(--color-blue-900);
+}
+.dot {
+  margin: 0 10px;
+  color: var(--color-muted);
+}
+
+.subtitle {
+  color: #374151;
+  font-size: 22px;
+}
+
+.desc {
+  margin: 14px auto 24px;
+  color: var(--color-muted);
+  max-width: 880px;
+  font-size: 18px;
+}
+
+.cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  border-radius: 12px;
+  background: var(--color-blue-900);
+  color: white;
+  box-shadow: 0 10px 20px rgba(16, 185, 129, 0.25);
+}
+
+.skills {
+  list-style: none;
+  padding: 0;
+  margin: 36px 0 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+.skill {
+  display: grid;
+  justify-items: center;
+  gap: 8px;
+}
+.iconBox {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  background: #f1f5f9;
+  color: #10b981;
+  font-size: 24px;
+  box-shadow: 0 10px 16px rgba(2, 6, 23, 0.06);
+}
+.skillLabel {
+  color: #64748b;
+  font-size: 14px;
+}
+
+.icon-code {
+  color: rgb(25, 0, 255);
+}
+.icon-palette {
+  color: rgb(255, 0, 251);
+}
+.icon-trending-up {
+  color: rgb(0, 255, 0);
+}
+.icon-brain-circuit {
+  color: rgb(0, 255, 179);
+}
+@media (max-width: 768px) {
+  .title {
+    font-size: 40px;
+  }
+  .subtitle {
+    font-size: 18px;
+  }
+  .skills {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
