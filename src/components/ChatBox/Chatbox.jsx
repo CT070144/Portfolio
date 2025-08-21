@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import classNames from 'classnames/bind';
 import { FiSend } from 'react-icons/fi';
 import { IoIosClose } from "react-icons/io";
@@ -21,6 +21,27 @@ function Chatbox({ onClose }) {
   const [messages, setMessages] = useState([]); // {role: 'user'|'ai', text: string}
   const [isTyping, setIsTyping] = useState(false);
 
+  const messagesEndRef = useRef(null);
+  const scrollToBottom = () => {
+    try {
+      messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+    } catch (_) {}
+  };
+
+  useEffect(() => {
+    scrollToBottom();
+  }, [messages, isTyping]);
+
+  function formatAnswer(text) {
+    if (!text) return '';
+    let t = text.replace(/\r\n/g, '\n');
+    t = t.replace(/^\s*[\*\-]\s+/gm, '• ');
+    t = t.replace(/\n{3,}/g, '\n\n');
+    t = t.replace(/\*\*(.*?)\*\*/g, '$1');
+    t = t.split('\n').map((s) => s.trimEnd()).join('\n');
+    return t.trim();
+  }
+
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -33,12 +54,17 @@ function Chatbox({ onClose }) {
     setIsTyping(true);
 
     try {
-        const res = await httpPost('http://localhost:8080/api/ask', { userInput: content });
-      // Support either string or {answer}
-      const answer = typeof res === 'string' ? res : res.answer ?? JSON.stringify(res);
+      console.log(content);
+        const res = await httpPost('http://localhost:8080/portfolio/ask', { message: content });
+      
+      if(res.code !== 1000){
+        throw new Error(res.message);
+      }
+      const answer = formatAnswer(res.result.message);
 
       // typewriter effect
       await streamAppend(answer, (chunk) => {
+        setIsTyping(false);
         setMessages((prev) => {
           const last = prev[prev.length - 1];
           if (last && last.role === 'ai-stream') {
@@ -116,6 +142,7 @@ function Chatbox({ onClose }) {
               </div>
             ))}
             {isTyping && <div className={cx('typing')}>Trợ lý AI đang trả lời...</div>}
+            <div ref={messagesEndRef} />
           </div>
         )}
      </div>

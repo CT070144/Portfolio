@@ -5,7 +5,7 @@
   right: 24px;
   width: 360px;
   max-width: calc(100vw - 32px);
-  background: #fff;
+  background: #f9f9f9;
   border-radius: 16px;
   box-shadow: 0 20px 40px rgba(2, 6, 23, 0.18);
   overflow: hidden;
@@ -21,7 +21,7 @@
   padding: 12px 14px;
   background: linear-gradient(
     180deg,
-    rgba(250, 233, 231, 0.9),
+    rgba(194, 224, 255, 0.9),
     rgba(231, 250, 243, 0.6)
   );
   border-bottom: 1px solid rgba(0, 0, 0, 0.06);
@@ -53,7 +53,7 @@
 .messages { display: grid; gap: 10px; }
 .msg { display: grid; gap: 6px; }
 .from-user { justify-items: end; }
-.bubble { max-width: 85%; padding: 10px 12px; border-radius: 12px; box-shadow: 0 6px 12px rgba(2,6,23,0.06); }
+.bubble { max-width: 85%; padding: 10px 12px; border-radius: 12px; box-shadow: 0 6px 12px rgba(2,6,23,0.06); white-space: pre-wrap; }
 .bubble-user { background: #e5f3ff; color: #111827; }
 .bubble-ai { background: #f1f5f9; color: #111827; }
 .typing { color: var(--color-muted); font-size: 13px; }

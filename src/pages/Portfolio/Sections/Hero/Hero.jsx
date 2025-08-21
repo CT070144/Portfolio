@@ -20,7 +20,7 @@ const Hero = () => {
       <div className={cx('container')}>
         <motion.div initial={{ scale: 0.9, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} transition={{ duration: 0.5 }} className={cx('avatarWrap')}>
           <div className={cx('avatarRing')}>
-           <img src={avatar} alt="avatar" className={cx('avatar')} />P
+           <img src={avatar} alt="avatar" className={cx('avatar')} />
           </div>
         </motion.div>
 
@@ -29,15 +29,15 @@ const Hero = () => {
         </motion.h1>
 
         <motion.p variants={itemVariants} initial="hidden" animate="show" custom={2} className={cx('subtitle')}>
-          Lập Trình Viên <span className={cx('dot')}>•</span> Nhà Sáng Lập <span className={cx('dot')}>•</span> Mentor
+          Lập Trình Viên <span className={cx('dot')}>•</span> CT7A <span className={cx('dot')}>•</span> KMA
         </motion.p>
 
         <motion.p variants={itemVariants} initial="hidden" animate="show" custom={3} className={cx('desc')}>
-          Passionate về việc phát triển tài năng trẻ trong lĩnh vực công nghệ. Với hơn 8 năm kinh nghiệm, tôi tin rằng mỗi dòng code đều có thể tạo ra tác động tích cực.
+          HỌC VIỆN KỸ THUẬT MẬT MÃ - Academy of Cryptography Technology
         </motion.p>
 
         <motion.a variants={itemVariants} initial="hidden" animate="show" custom={4} href="#ninja" className={cx('cta')}>
-          Tìm hiểu chương trình Ninja AI <FiArrowRight />
+          Tìm hiểu chi tiết về Phúc  <FiArrowRight />
         </motion.a>
 
         <motion.ul variants={itemVariants} initial="hidden" animate="show" custom={5} className={cx('skills')}>

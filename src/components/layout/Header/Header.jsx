@@ -14,6 +14,10 @@ const Header = () => {
         <nav className={cx('nav')}>
           <a className={cx('link', 'active')} href="#about">Giới thiệu về Phúc</a>
           <a className={cx('link')} href="#ninja">Chương trình Ninja AI</a>
+          <a className={cx('link')} href="#skills">Kỹ Năng</a>
+          <a className={cx('link')} href="#projects">Dự Án</a>
+          <a className={cx('link')} href="#working-style">Liên hệ</a>
+         
           
         </nav>
       </div>
