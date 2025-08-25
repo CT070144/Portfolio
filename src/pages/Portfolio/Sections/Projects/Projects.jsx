@@ -10,34 +10,34 @@ const cx = classNames.bind(styles);
 
 const projects = [
   {
-    title: 'Agent Locaith AI',
+    title: 'KMA Journey Website',
     status: 'Đang vận hành',
     image: project1,
     desc:
       'Nền tảng AI trợ giúp soạn thảo văn bản thông minh, hỗ trợ tạo nội dung nhanh chóng, xuất file word định dạng chuẩn.',
-    tags: ['React', 'Node.js', 'PostgreSQL', 'Python', 'RAG'],
-    demo: '#',
-    code: '#',
+    tags: ['React', 'Node.js', 'MySQL', 'Java'],
+    demo: 'https://github.com/CT070144/IdentifyService.SpringBoot',
+    code: 'https://github.com/CT070144/IdentifyService.SpringBoot',
   },
   {
-    title: 'Phuong Nam Group',
+    title: 'Identify service - Spring Boot',
     status: 'Đang vận hành',
     image: project2,
     desc:
       'Website landing page và tin tức giới thiệu dịch vụ truyền thông, các dự án nổi bật, xây dựng bằng React và Node.js, lưu trữ dữ liệu bằng PostgreSQL.',
-    tags: ['React', 'Node.js', 'PostgreSQL'],
-    demo: '#',
-    code: '#',
+    tags: ['React', 'Spring Boot', 'PostgreSQL'],
+    demo: 'https://github.com/CT070144/KMAJourney_FE',
+    code: 'https://github.com/CT070144/KMAJourney_BE',
   },
   {
-    title: 'Đơn Hàng Hy Lạp',
+    title: 'The Band Website',
     status: 'Đang vận hành',
     image: project3,
     desc:
       'Website tin tuyển dụng và cơ hội xuất khẩu lao động sang Hy Lạp. Phát triển trên nền tảng WordPress với giao diện thân thiện, dễ quản trị nội dung.',
-    tags: ['WordPress'],
-    demo: '#',
-    code: '#',
+    tags: ['HTML', 'CSS', 'JavaScript'],
+    demo: 'https://github.com/CT070144/TheBand',
+    code: 'https://github.com/CT070144/TheBand',
   },
 ];
 

@@ -29,14 +29,14 @@ const Hero = () => {
         </motion.h1>
 
         <motion.p variants={itemVariants} initial="hidden" animate="show" custom={2} className={cx('subtitle')}>
-          Lập Trình Viên <span className={cx('dot')}>•</span> CT7A <span className={cx('dot')}>•</span> KMA
+          Thực tập sinh <span className={cx('dot')}>•</span> Lập trình <span className={cx('dot')}>•</span> KMA
         </motion.p>
 
         <motion.p variants={itemVariants} initial="hidden" animate="show" custom={3} className={cx('desc')}>
-          HỌC VIỆN KỸ THUẬT MẬT MÃ - Academy of Cryptography Technology
+         Academy of Cryptography Technology
         </motion.p>
 
-        <motion.a variants={itemVariants} initial="hidden" animate="show" custom={4} href="#ninja" className={cx('cta')}>
+        <motion.a variants={itemVariants} initial="hidden" animate="show" custom={4} href="#skills" className={cx('cta')}>
           Tìm hiểu chi tiết về Phúc  <FiArrowRight />
         </motion.a>
 

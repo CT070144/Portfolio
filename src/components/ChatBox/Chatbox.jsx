@@ -10,7 +10,7 @@ const cx = classNames.bind(styles);
 const SUGGESTIONS = [
   'Chương trình Ninja AI là gì?',
   'Làm thế nào để tham gia chương trình?',
-  'Huân có kinh nghiệm gì?',
+  'Phúc có kinh nghiệm gì?',
   'Lộ trình học tập như thế nào?',
 ];
 

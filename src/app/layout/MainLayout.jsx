@@ -14,7 +14,7 @@ const MainLayout = ({ children }) => {
 
   return (
     <>
-      <Header />
+      <Header className={cx('header')} />
       <main>{children}</main>
       <Footer />
       {open && <Chatbox onClose={() => setOpen(false)} />}

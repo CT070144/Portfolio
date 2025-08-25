@@ -67,4 +67,8 @@
   color: var(--color-muted);
 }
 
-
+@media (max-width: 768px) {
+  .top {
+    grid-template-columns: 1fr;
+  }
+}
